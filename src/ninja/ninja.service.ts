@@ -38,7 +38,6 @@ export class NinjaService {
   }
 
   updateNinja(id: number, updateNinjaDto: UpdateNinjaDto) {
-    console.log(id);
     this.ninjas = this.ninjas.map((ninja) => {
       if (ninja.id === id) {
         return { ...ninja, ...updateNinjaDto };
