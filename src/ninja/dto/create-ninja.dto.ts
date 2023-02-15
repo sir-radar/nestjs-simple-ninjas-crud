@@ -1,9 +1,9 @@
-import { IsEnum, MinLength } from 'class-validator';
+import { IsString, MinLength } from 'class-validator';
 
 export class CreateNinjaDto {
   @MinLength(3)
   name: string;
 
-  @IsEnum(['stars' | 'nunchucks'], { message: 'Use correct weapon' })
+  @IsString()
   weapon: 'stars' | 'nunchucks';
 }
